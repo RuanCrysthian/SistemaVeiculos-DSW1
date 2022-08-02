@@ -1,14 +1,8 @@
-drop database if exists VeiculosSQL;
+drop database if exists DBVeiculos;
 
-create database VeiculosSQL;
+create database DBVeiculos;
 
-use VeiculosSQL;
-
-TRUNCATE TABLE Usuario;
-TRUNCATE TABLE  Cliente;
-TRUNCATE TABLE lojas;
-TRUNCATE TABLE carro;
-TRUNCATE TABLE Proposta;
+use DBVeiculos;
 
 create table Usuario(
 	id bigint not null auto_increment,
@@ -66,5 +60,6 @@ create table Proposta(
 	foreign key (carro_id) references carro(id),
 	primary key(id)
 );
+
 
 insert into Usuario(email, senha, papel) values ('admin', 'admin', 'ADMIN');
