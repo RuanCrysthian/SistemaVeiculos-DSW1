@@ -1,8 +1,8 @@
-drop database if exists DBVeiculos;
+drop database if exists rcVeiculosBD;
 
-create database DBVeiculos;
+create database rcVeiculosBD;
 
-use DBVeiculos;
+use rcVeiculosBD;
 
 create table Usuario(
 	id bigint not null auto_increment,
@@ -43,7 +43,7 @@ create table carro(
 	quilometragem int(10) not null,
 	descricao varchar(120) not null,
 	valor float(11,2) not null,
-	fotos varchar(10) not null,
+	fotos varchar(10),
 	primary key(id),
   	foreign key(id_loja) references lojas(id)
 );
@@ -61,5 +61,5 @@ create table Proposta(
 	primary key(id)
 );
 
-
 insert into Usuario(email, senha, papel) values ('admin', 'admin', 'ADMIN');
+
