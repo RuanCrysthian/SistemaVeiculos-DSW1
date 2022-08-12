@@ -92,7 +92,7 @@ public class AdminController extends HttpServlet {
             }
     	} else {
     		erros.add("Acesso não autorizado!");
-    		erros.add("Apenas Papel [ADMIN] tem acesso a essa página");
+    		erros.add("Apenas [ADMIN] tem acesso a essa página");
     		request.setAttribute("mensagens", erros);
     		RequestDispatcher rd = request.getRequestDispatcher("/noAuth.jsp");
     		rd.forward(request, response);
