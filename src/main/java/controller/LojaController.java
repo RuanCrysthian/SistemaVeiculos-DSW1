@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.CarroDAO;
-//import dao.PropostaDAO;
-//import domain.Proposta;
 import domain.Carro;
 import dao.LojaDAO;
 import dao.UsuarioDAO;
@@ -88,7 +86,7 @@ private static final long serialVersionUID = 1L;
 	        }
 		} else {
 			erros.add("Acesso não autorizado!");
-			erros.add("Apenas Papel [LOJA] tem acesso a essa página");
+			erros.add("Apenas [LOJA] tem acesso a essa página");
 			request.setAttribute("mensagens", erros);
 			RequestDispatcher rd = request.getRequestDispatcher("/noAuth.jsp");
 			rd.forward(request, response);
